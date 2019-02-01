@@ -8,7 +8,7 @@ public abstract class Command {
     private final String[] aliases;
     private final String description;
 
-    public Command(String name, String description, String... aliases) {
+    protected Command(String name, String description, String... aliases) {
         this.name = name;
         this.aliases = aliases;
         this.description = description;

@@ -2,7 +2,7 @@ package de.nurmarvin.minesweeperbot.game;
 
 import org.jetbrains.annotations.Contract;
 
-public final class Field {
+final class Field {
     private final boolean bomb;
     private final int x;
     private final int y;

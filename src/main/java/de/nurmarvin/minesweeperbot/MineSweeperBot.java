@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public final class MineSweeperBot {
     private static MineSweeperBot instance;
-    private CommandRegistry commandRegistry;
+    private final CommandRegistry commandRegistry;
 
     private MineSweeperBot(String token) throws LoginException {
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);

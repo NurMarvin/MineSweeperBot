@@ -23,22 +23,19 @@ public final class Board {
 
     private void populate() {
         int currentBombs = 0;
-        for (int y = 0; y < 8; y++) {
-            for (int x = 0; x < 8; x++) {
+        for (int y = 0; y < 8; y++)
+            for (int x = 0; x < 8; x++)
                 if (currentBombs < maxBombs) {
                     if (ThreadLocalRandom.current().nextBoolean()) {
                         this.addField(new Field(true, x, y));
                         currentBombs++;
                     } else this.addField(new Field(false, x, y));
                 } else this.addField(new Field(false, x, y));
-            }
-        }
     }
 
     private void addField(Field field) {
         if (this.revealedField == null && ThreadLocalRandom.current().nextBoolean() && !field.isBomb())
-            this.revealedField =
-                    field;
+            this.revealedField = field;
         this.fields.add(field);
     }
 
