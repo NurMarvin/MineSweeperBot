@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public final class Board {
-    private ArrayList<Field> fields;
-    private int maxBombs;
+    private final ArrayList<Field> fields;
+    private final int maxBombs;
     private Field revealedField;
 
     public Board() {
