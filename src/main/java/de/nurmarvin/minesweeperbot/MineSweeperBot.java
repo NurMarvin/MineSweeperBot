@@ -27,11 +27,11 @@ public final class MineSweeperBot {
         commandRegistry.registerCommand(new HelpCommand());
         commandRegistry.registerCommand(new InviteCommand());
 
-        JDA jda = new JDABuilder(token).setGame(Game.playing("Minesweeper | Serving 0 Guilds"))
+        JDA jda = new JDABuilder(token).setGame(Game.playing("m!help | Serving 0 Guilds"))
                                        .addEventListener(commandRegistry).build();
 
         executorService.scheduleAtFixedRate(() -> jda.getPresence().setGame(Game.playing(
-                String.format("Minesweeper | Serving %s Guilds", jda.getGuilds().size()))), 1, 10, TimeUnit.SECONDS);
+                String.format("m!help | Serving %s Guilds", jda.getGuilds().size()))), 1, 10, TimeUnit.SECONDS);
     }
 
     public static void main(String[] args) throws LoginException {
